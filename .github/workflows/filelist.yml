@@ -1,18 +1,27 @@
-name: Manual file list
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   list-files:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
-      - name: List files
-        run: ls /path/to/directory > files.txt
-      - name: Upload files
+      - name: Seznam otevření 
+        run: ls /data/otevreni > otevreni.txt
+      - name: Nahrání otevreni
         uses: actions/upload-artifact@v2
         with:
-          name: file-list
-          path: files.txt
+          name: otevreni
+          path: otevreni.txt
+      - name: Seznam koncovek 
+        run: ls /data/koncovky > koncovky.txt
+      - name: Nahrání koncovek
+        uses: actions/upload-artifact@v2
+        with:
+          name: koncovky
+          path: koncovky.txt
