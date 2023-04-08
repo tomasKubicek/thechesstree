@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 
 <head>
     <meta charset="UTF-8">
@@ -9,92 +9,93 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/de6772e16a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./theme.css">
 </head>
 
 
-<body class="bg-secondary">
-    <!-- <nav class="navbar navbar navbar-expand-md py-2 bg-primary border-bottom text-white">
-        <div class="container d-flex flex-wrap flex-row justify-content-between">
-            <a href="/" class="link-body-emphasis text-decoration-none fs-4 text-light">
-                The Chess Tree
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#maninav" aria-controls="maninav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainnav"></div>
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item"><a href="#" class="nav-link link-light px-2 active" aria-current="page">Úvod</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-light px-2">Databáze</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link link-light dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Databáze</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Otevření</a></li>
-                        <li><a class="dropdown-item" href="#">Koncovky</a></li>
-                        <li><a class="dropdown-item" href="#">Kontribuce</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#" class="nav-link link-light px-2">Kontakt</a></li>
-            </ul>
-        </div>
-    </nav> -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-primary text-light">
-        <div class="container d-flex flex-wrap flex-row justify-content-between">
-            <a class="navbar-brand fs-3" href="#">The Chess Tree</a>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark text-light bg-transparent py-0 position-fixed w-100 top-0 start-0 py-sm-3">
+        <!-- "position-fixed" dělá to stejné jako sticky, jen nevytváří static mezeru, jinak bych použil "position-sticky" nebo "sticky-top" -->
+        <div class="container d-flex flex-wrap flex-row justify-content-between bg-primary rounded-5 px-5 py-1" id="navcontainer">
+            <a class="navbar-brand fs-3" href="#">♙ The Chess Tree</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainnav" aria-controls="mainnav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="mainnav">
                 <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-                    <li class="nav-item"><a href="#" class="nav-link link-light px-2 active" aria-current="page">Úvod</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link link-light px-2">O projektu</a></li>
+                    <li class="nav-item"><a href="./index.html" class="nav-link link-light px-2 active" aria-current="page">Úvod</a></li>
+                    <li class="nav-item"><a href="./oprojektu.html" class="nav-link link-light px-2">O projektu</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link link-light dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Databáze</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Otevření</a></li>
-                            <li><a class="dropdown-item" href="#">Koncovky</a></li>
-                            <li><a class="dropdown-item" href="#">Kontribuce</a></li>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="./db/otevreni.html">Otevření</a></li>
+                            <li><a class="dropdown-item" href="./db/koncovky.html">Koncovky</a></li>
+                            <li><a class="dropdown-item" href="./db/kontribuce.html">Kontribuce</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link link-light px-2">Github</a></li>
+                    <li class="nav-item"><a href="https://github.com/tomasKubicek/thechesstree" target="_blank" class="nav-link link-light px-2">GitHub</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div id="hero" class="text-center bg-image" style="background-image: url('./chessboard.jpg'); background-size: cover; background-position: center center;">
-        <div class="mask py-5" style="background-color: rgba(0, 16, 0, 0.6); height: calc(100vh - 68px);">
+    <div id="hero" class="text-center bg-image" style="background-image: url('./assets/heroboard.jpg'); background-size: cover; background-position: center center;">
+        <div class="mask py-5" style="background-color: rgba(0, 16, 0, 0.6); height: 100vh;">
             <div class="container d-flex justify-content-center align-items-center h-100">
                 <div class="text-white">
-                    <h1 class="mb-3">Otevřená Šachová Databáze</h1>
+                    <h1 class="mb-3">Komunitní Šachová Databáze</h1>
                     <h5 class="mb-4">
-                        The Chess Tree je otevřená databáze šachových otevření a koncovek.
+                        The Chess Tree je otevřená komunitní databáze šachových otevření a koncovek. <br> Databázi můžete prozkoumat, nebo přispět svým vlastním otevřením nebo koncovkou.
                     </h5>
-                    <a class="btn btn-outline-light btn-lg m-2" href="./database.html" role="button" rel="nofollow">Prozkoumat databázi</a>
-                    <a class="btn btn-outline-light btn-lg m-2" href="#about" role="button">O projektu</a>
+                    <div class="d-flex flex-column justify-content-center align-content-center flex-sm-row">
+                        <a class="btn btn-outline-light btn-lg m-2 px-4" href="./database.html" role="button" rel="nofollow">Prozkoumat databázi</a>
+                        <a class="btn btn-outline-light btn-lg m-2 px-4" href="#about" role="button">O projektu</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container col-xxl-8 px-4 py-5 bg-secondary text-light">
+    <div class="container col-xxl-8 px-4 py-5 bg-dark text-light" id="about">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" width="700" height="500">
+            <div class="col-10 col-sm-8 col-lg-3">
+                <img src="./assets/chessopening.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" width="700" height="500">
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-9">
                 <h1 class="display-5 fw-bold lh-1 mb-3">O projektu</h1>
-                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful
-                    JavaScript plugins.</p>
+                <p class="py-3">
+                    Tato stránka byla vytvořena jako projekt do školy a jako užitečný nástroj pro každého, kdo se zajímá o šachy. <br> Tato databáze obsahuje přesné informace o různých šachových otevřeních a koncovkách, což vám pomůže lépe porozumět hře
+                    a zlepšit vaše šachové schopnosti. <br> Databáze je navíc snadno ovladatelná a přehledná, což vám umožní rychle najít informace, které potřebujete. Díky spolupráci s GitHubem můžete být ujištěni, že naše data jsou vždy aktuální a spolehlivé.
+                    <br>
+                </p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+                    <a type="button" class="btn btn-outline-primary btn-lg px-4 me-md-2">Prozkoumat</a>
+                    <a type="button" class="btn btn-outline-light btn-lg px-4">Více o projektu</a>
                 </div>
             </div>
         </div>
     </div>
     </header>
+    <div class="bg-secondary border-top border-2" style="border-color: rgba(var(--bs-light-rgb), 0.1);">
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-light text-decoration-none lh-1">
+                        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                    <span class="mb-3 mb-md-0 text-light">© 2023 The Chess Tree | by TKDEV</span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-light" href="#"><i class="fa-solid fa-angle-up text-primary"></i></a></li>
+                    <li class="ms-3"><a class="text-light" href="https://github.com/tomasKubicek/thechesstree" target="_blank"><i class="fa-brands fa-github text-primary"></i></a></li>
+                    <li class="ms-3"><a class="text-light" href="https://www.instagram.com/kubanec_tomanec/" target="_blank"><i class="fa-brands fa-instagram text-primary"></i></a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
 
 </body>
 
