@@ -46,41 +46,92 @@
             </div>
         </div>
     </nav>
-
-    <div class="container col-xxl-8 px-4 py-5 bg-dark text-light" id="about">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-3">
-                <img src="./assets/chessopening.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" width="700" height="500">
+    <div class="bg-secondary">
+        <div class="container col-xxl-8 px-4 py-5 bg-secondary text-light" id="about">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-3">
+                    <img src="./assets/chessopening.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" width="700" height="500">
+                </div>
+                <div class="col-lg-9 pt-5">
+                    <h2 class="display-5 fw-bold lh-1 mb-3">O projektu</h2>
+                    <p class="py-3">
+                        Tato stránka byla vytvořena jako projekt do školy a jako užitečný nástroj pro každého, kdo se zajímá o šachy. <br> Tato databáze obsahuje přesné informace o různých šachových otevřeních a koncovkách, což vám pomůže lépe porozumět
+                        hře a zlepšit vaše šachové schopnosti. <br> Databáze je navíc snadno ovladatelná a přehledná, což vám umožní rychle najít informace, které potřebujete. Díky spolupráci s GitHubem můžete být ujištěni, že naše data jsou vždy aktuální
+                        a spolehlivé.
+                        <br>
+                    </p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a type="button" class="btn btn-outline-primary btn-lg px-4 me-md-2">Prozkoumat</a>
+                        <a type="button" class="btn btn-outline-light btn-lg px-4">Přispět do projektu</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-9 pt-5">
-                <h1 class="display-5 fw-bold lh-1 mb-3">O projektu</h1>
-                <p class="py-3">
-                    Tato stránka byla vytvořena jako projekt do školy a jako užitečný nástroj pro každého, kdo se zajímá o šachy. <br> Tato databáze obsahuje přesné informace o různých šachových otevřeních a koncovkách, což vám pomůže lépe porozumět hře
-                    a zlepšit vaše šachové schopnosti. <br> Databáze je navíc snadno ovladatelná a přehledná, což vám umožní rychle najít informace, které potřebujete. Díky spolupráci s GitHubem můžete být ujištěni, že naše data jsou vždy aktuální a spolehlivé.
-                    <br>
-                </p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <a type="button" class="btn btn-outline-primary btn-lg px-4 me-md-2">Prozkoumat</a>
-                    <a type="button" class="btn btn-outline-light btn-lg px-4">Více o projektu</a>
+        </div>
+    </div>
+    <div class="bg-dark">
+        <div class="container col-xxl-8 px-4 py-5 text-light bg-dark">
+            <h2 class="display-5 fw-bold lh-1 mb-3">Vývoj</h2>
+
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+                <div class="col d-flex flex-column align-items-start gap-2">
+                    <h3 class="fw-bold">Jak tato stránka funguje?</h3>
+                    <p>Tato stránka musí být někde uložená a jako školní projekt má nějaké požadavky na použité prostředky. </p>
+                    <a href="#" class="btn btn-outline-primary btn-lg">Zobrazit na GitHubu</a>
+                </div>
+
+                <div class="col">
+                    <div class="row row-cols-1 row-cols-sm-2 g-4">
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-primary fs-4 rounded-3">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <h4 class="fw-semibold mb-0">Bootstrap v5.3</h4>
+                            <p>Knihovna vzhledů webových stránkek. </p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-primary fs-4 rounded-3">
+                                <i class="fab fa-font-awesome"></i>
+                            </div>
+                            <h4 class="fw-semibold mb-0">Font Awesome v5</h4>
+                            <p>Knihovna ikon. Např. nad tímto textem.</p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-primary fs-4 rounded-3">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h4 class="fw-semibold mb-0">GitHub</h4>
+                            <p>GitHub slouží jako úložistě kódu, šachové databáze a webový server.</p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2 ">
+                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-primary fs-4 rounded-3 ">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <h4 class="fw-semibold mb-0 ">JavaScript</h4>
+                            <p>JavaScript je využíván pro zobrazení koncovek, otevření a šachové desky.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     </header>
-    <div class="bg-secondary border-top border-2" style="border-color: rgba(var(--bs-light-rgb), 0.1);">
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
-                <div class="col-md-4 d-flex align-items-center">
-                    <a href="/" class="mb-3 me-2 mb-md-0 text-light text-decoration-none lh-1">
-                        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+    <div class="bg-secondary border-top border-2 " style="border-color: rgba(var(--bs-light-rgb), 0.1); ">
+        <div class="container ">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 ">
+                <div class="col-md-4 d-flex align-items-center ">
+                    <a href="/ " class="mb-3 me-2 mb-md-0 text-light text-decoration-none lh-1 ">
+                        <svg class="bi " width="30 " height="24 "><use xlink:href="#bootstrap "></use></svg>
                     </a>
-                    <span class="mb-3 mb-md-0 text-light">© 2023 The Chess Tree | by TKDEV</span>
+                    <span class="mb-3 mb-md-0 text-light ">© 2023 The Chess Tree | by TKDEV</span>
                 </div>
 
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex fs-4">
-                    <li class="ms-3"><a class="text-light" href="#"><i class="fas fa-angle-up text-primary"></i></a></li>
-                    <li class="ms-3"><a class="text-light" href="https://github.com/tomasKubicek/thechesstree" target="_blank"><i class="fab fa-github text-primary"></i></a></li>
-                    <li class="ms-3"><a class="text-light" href="https://www.instagram.com/kubanec_tomanec/" target="_blank"><i class="fab fa-instagram text-primary"></i></a></li>
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex fs-4 ">
+                    <li class="ms-3 "><a class="text-light " href="# "><i class="fas fa-angle-up text-primary "></i></a></li>
+                    <li class="ms-3 "><a class="text-light " href="https://github.com/tomasKubicek/thechesstree " target="_blank "><i class="fab fa-github text-primary "></i></a></li>
+                    <li class="ms-3 "><a class="text-light " href="https://www.instagram.com/kubanec_tomanec/ " target="_blank "><i class="fab fa-instagram text-primary "></i></a></li>
                 </ul>
             </footer>
         </div>
