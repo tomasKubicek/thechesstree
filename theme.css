@@ -47,22 +47,6 @@
     --bs-danger-text-emphasis: #58151c;
     --bs-light-text-emphasis: #495057;
     --bs-dark-text-emphasis: #495057;
-    --bs-primary-bg-subtle: #cfe2ff;
-    --bs-secondary-bg-subtle: #e2e3e5;
-    --bs-success-bg-subtle: #d1e7dd;
-    --bs-info-bg-subtle: #cff4fc;
-    --bs-warning-bg-subtle: #fff3cd;
-    --bs-danger-bg-subtle: #f8d7da;
-    --bs-light-bg-subtle: #fcfcfd;
-    --bs-dark-bg-subtle: #ced4da;
-    --bs-primary-border-subtle: #9ec5fe;
-    --bs-secondary-border-subtle: #c4c8cb;
-    --bs-success-border-subtle: #a3cfbb;
-    --bs-info-border-subtle: #9eeaf9;
-    --bs-warning-border-subtle: #ffe69c;
-    --bs-danger-border-subtle: #f1aeb5;
-    --bs-light-border-subtle: #e9ecef;
-    --bs-dark-border-subtle: #adb5bd;
     --bs-white-rgb: 255, 255, 255;
     --bs-black-rgb: 0, 0, 0;
     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -141,22 +125,6 @@
     --bs-danger-text-emphasis: #ea868f;
     --bs-light-text-emphasis: #f8f9fa;
     --bs-dark-text-emphasis: #dee2e6;
-    --bs-primary-bg-subtle: #031633;
-    --bs-secondary-bg-subtle: #161719;
-    --bs-success-bg-subtle: #051b11;
-    --bs-info-bg-subtle: #032830;
-    --bs-warning-bg-subtle: #332701;
-    --bs-danger-bg-subtle: #2c0b0e;
-    --bs-light-bg-subtle: #343a40;
-    --bs-dark-bg-subtle: #1a1d20;
-    --bs-primary-border-subtle: #084298;
-    --bs-secondary-border-subtle: #41464b;
-    --bs-success-border-subtle: #0f5132;
-    --bs-info-border-subtle: #087990;
-    --bs-warning-border-subtle: #997404;
-    --bs-danger-border-subtle: #842029;
-    --bs-light-border-subtle: #495057;
-    --bs-dark-border-subtle: #343a40;
     --bs-link-color: #6ea8fe;
     --bs-link-hover-color: #8bb9fe;
     --bs-link-color-rgb: 110, 168, 254;
@@ -203,4 +171,8 @@
     #navcontainer {
         border-radius: 0 !important;
     }
+}
+
+i {
+    font-family: 'Font Awasome';
 }
