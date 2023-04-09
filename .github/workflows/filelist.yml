@@ -13,9 +13,9 @@ jobs:
       - name: Seznam koncovek 
         run: ls ./data/koncovky > koncovky.txt   
       - name: Setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
       - name: Upload otevreni
-        uses: LasyIsLazy/github-upload-action@v0.1.0
+        uses: LasyIsLazy/github-upload-action@v0.2.0
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           file-path: otevreni.txt
@@ -23,7 +23,7 @@ jobs:
           repo: thechesstree
           remote-dir: data/list/
       - name: Upload koncovky
-        uses: LasyIsLazy/github-upload-action@v0.1.0
+        uses: LasyIsLazy/github-upload-action@v0.2.0
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           file-path: koncovky.txt
