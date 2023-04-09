@@ -1,0 +1,22 @@
+# Název Openingu/Koncovky
+name: Sicilská obrana - Drak
+# Popis
+description: Populární rozvětvení Sicilské obrany, dochází ke komplikovaným situacím.
+
+# Kdo je na řadě. 1 = bílý, 0 = černý. 
+onmove: 1
+
+# Tahy, ve formátu SAN. Jeden dvoutah na jeden řádek. 
+moves: 
+  - e4 c5 
+  - Nf3 d6
+  - d4 cxd4
+  - Nxd4 Nf6 
+  - Nc3 g6
+
+
+
+
+
+
+
