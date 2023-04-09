@@ -1,0 +1,20 @@
+# Název Openingu/Koncovky
+name: Francouzská obrana
+
+# Popis
+description: Bílého se snaží zaútočit na střed, černý mezitím stavní zeď pěšců.
+
+# Kdo je na řadě. 1 = bílý, 0 = černý. 
+onmove: 1
+
+# Tahy, ve formátu SAN. Jeden dvoutah na jeden řádek. 
+moves: 
+  - e4 c6 
+  - d4 d5
+
+
+
+
+
+
+
