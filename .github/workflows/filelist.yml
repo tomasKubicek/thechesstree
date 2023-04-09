@@ -1,7 +1,6 @@
 name: List Files
 
-on:
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 
 jobs:
   list-files:
@@ -14,24 +13,15 @@ jobs:
       
       - name: List otevreni
         run: |
-          cd data/otevreni
-          ls > otevreni.txt
+          ls data/otevreni > otevreni.txt
+          
+      - name: List koncovky
+        run: |
+          ls data/koncovky > koncovky.txt
       
       - name: Send otevreni
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Send otevreni"
           commit_options: "--no-verify"
-          file_pattern: "data/otevreni/otevreni.txt"
-
-      - name: List koncovky
-        run: |
-          cd data/koncovky
-          ls > koncovky.txt
-      
-      - name: Send koncovky
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "Send koncovky"
-          commit_options: "--no-verify"
-          file_pattern: "data/koncovky/koncovky.txt"
+          file_pattern: "./*.txt"
