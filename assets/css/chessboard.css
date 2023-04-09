@@ -1,0 +1,20 @@
+/* Bílé čtverce */
+
+.white-1e1d7 {
+    background-color: #e4ecd0 !important;
+    color: #58963b !important;
+    font-weight: bold;
+}
+
+
+/* Černé čtverce */
+
+.black-3c85d {
+    background-color: #58963b !important;
+    color: #e4ecd0 !important;
+    font-weight: bold;
+}
+
+.board-b72b1 {
+    border: 2px solid #084b18 !important;
+}

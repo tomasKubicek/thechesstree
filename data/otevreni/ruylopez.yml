@@ -1,0 +1,22 @@
+# Název Openingu/Koncovky
+name: Ruy Lopez
+
+# Popis
+description: Španělská hra, nejrozšířenější hra na světě.
+
+# Kdo je na řadě. 1 = bílý, 0 = černý. 
+onmove: 1
+
+# Tahy, ve formátu SAN. Jeden dvoutah na jeden řádek. 
+moves: 
+  - e4 e5
+  - Nf3 Nc6
+  - Bb5
+
+
+
+
+
+
+
+
