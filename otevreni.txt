@@ -2,7 +2,6 @@ carokann.yml
 francouzskaobrana.yml
 giuocopiano.yml
 kgambit.yml
-otevreni.txt
 ruylopez.yml
 sicilskadrak.yml
 sicilskanajdorf.yml
