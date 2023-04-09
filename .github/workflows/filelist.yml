@@ -10,18 +10,24 @@ jobs:
         uses: actions/checkout@v3
       - name: Seznam otevření 
         run: ls ./data/otevreni > otevreni.txt
-      - name: Nahrání otevření
-        uses: actions/upload-asset@v2
-        with:
-          path: otevreni.txt
-          name: otevreni.txt
-          label: otevreni
       - name: Seznam koncovek 
-        run: ls ./data/koncovky > koncovky.txt
-      - name: Nahrání koncovek
-        uses: actions/upload-asset@v2
+        run: ls ./data/koncovky > koncovky.txt   
+      - name: Setup node
+        uses: actions/setup-node@v1
+      - name: Upload otevreni
+        uses: LasyIsLazy/github-upload-action@v0.1.0
         with:
-          path: koncovky.txt
-          name: koncovky.txt
-          label: koncovky
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          file-path: otevreni.txt
+          owner: tomasKubicek
+          repo: thechesstree
+          remote-dir: data/list/
+      - name: Upload koncovky
+        uses: LasyIsLazy/github-upload-action@v0.1.0
+        with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          file-path: koncovky.txt
+          owner: tomasKubicek
+          repo: thechesstree
+          remote-dir: data/list/
 
