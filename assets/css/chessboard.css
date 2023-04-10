@@ -17,4 +17,5 @@
 
 .board-b72b1 {
     border: 2px solid #084b18 !important;
+    overflow: hidden;
 }

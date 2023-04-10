@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheChessTree | Šachová databáze</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js" integrity="sha512-CSBhVREyzHAjAFfBlIBakjoRUKp5h7VSweP0InR/pAJyptH7peuhCsqAI/snV+TwZmXZqoUklpXp6R6wMnYf5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a133fbfca8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="../assets/css/chessboard.css">
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css" integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js" integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js" integrity="sha512-xRllwz2gdZciIB+AkEbeq+gVhX8VB8XsfqeFbUh+SzHlN96dEduwtTuVuc2u9EROlmW9+yhRlxjif66ORpsgVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.js" integrity="sha512-oprzqYFJfo4Bx/nNEcSI0xo7ggJrLc+qQ6hrS3zV/Jn0C4dsg4gu+FXW/Vm0jP9CrV7e5e6dcLUYkg3imjfjbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<style>
+    body {
+        overflow-y: scroll;
+    }
+</style>
+
+
+<body class="bg-dark">
+    <nav class="navbar z-3 navbar-expand-md navbar-dark text-light bg-transparent py-0 position-fixed w-100 top-0 start-0 py-sm-3">
+        <!-- "position-fixed" dělá to stejné jako sticky, jen nevytváří static mezeru, jinak bych použil "position-sticky" nebo "sticky-top" -->
+        <div class="container d-flex flex-wrap flex-row justify-content-between bg-primary rounded-5 px-5 py-1" id="navcontainer">
+            <a class="navbar-brand fs-3" href="#">♙ The Chess Tree</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainnav" aria-controls="mainnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainnav">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item"><a href="../index.html" class="nav-link link-light px-2 active" aria-current="page">Úvod</a></li>
+                    <li class="nav-item"><a href="../oprojektu.html" class="nav-link link-light px-2">O projektu</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link link-light dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Databáze</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="../db/databaze.html">Přehled</a></li>
+                            <li><a class="dropdown-item" href="../db/otevreni.html">Otevření</a></li>
+                            <li><a class="dropdown-item" href="../db/koncovky.html">Koncovky</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="https://github.com/tomasKubicek/thechesstree" target="_blank" class="nav-link link-light px-2">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-secondary">
+        <div class="container col-xxl-8 px-4 py-5 bg-secondary text-light" id="about">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5 position-relative">
+                <div class="text-center pt-5">
+                    <h2 class="display-5 fw-bold lh-1 mb-3 mt-4">Šachové koncovky</h2>
+                    <p>Zde naleznete komunitní databázi šachových koncovky. </p>
+                </div>
+                <a class="position-absolute top-50 end-0 w-auto d-flex flex-column justify-content-center align-items-center link-light text-decoration-none" href="./databaze.html#jakprispet">
+                    <div class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-primary rounded-3">
+                        <i class="fas fa-plus fs-4"></i>
+                    </div>
+                    <span class="w-auto">Přidat koncovky</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="album py-5 bg-dark">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-3 px-1" id="endings">
+            </div>
+        </div>
+    </div>
+
+    <script defer src="./js/displayendings.js"></script>
+
+    </header>
+    <div class="bg-secondary border-top border-2 " style="border-color: rgba(var(--bs-light-rgb), 0.1); ">
+        <div class="container ">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 ">
+                <div class="col-md-4 d-flex align-items-center ">
+                    <a href="/ " class="mb-3 me-2 mb-md-0 text-light text-decoration-none lh-1 ">
+                        <svg class="bi " width="30 " height="24 "><use xlink:href="#bootstrap "></use></svg>
+                    </a>
+                    <span class="mb-3 mb-md-0 text-light ">© 2023 The Chess Tree | by TKDEV</span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex fs-4 ">
+                    <li class="ms-3 "><a class="text-light " href="# "><i class="fas fa-angle-up text-primary "></i></a></li>
+                    <li class="ms-3 "><a class="text-light " href="https://github.com/tomasKubicek/thechesstree " target="_blank "><i class="fab fa-github text-primary "></i></a></li>
+                    <li class="ms-3 "><a class="text-light " href="https://www.instagram.com/kubanec_tomanec/ " target="_blank "><i class="fab fa-instagram text-primary "></i></a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -3,8 +3,6 @@ name: Sicilská obrana - Najdorf
 # Popis
 description: Populární rozvětvení Sicilské obrany, dochází ke komplikovaným situacím.
 
-# Kdo je na řadě. 1 = bílý, 0 = černý. 
-onmove: 1
 
 # Tahy, ve formátu SAN. Jeden dvoutah na jeden řádek. 
 moves: 
@@ -13,7 +11,7 @@ moves:
   - d4 cxd4
   - Nxd4 Nf6 
   - Nc3 a6
-
+e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6
 
 
 

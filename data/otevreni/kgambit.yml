@@ -4,8 +4,6 @@ name: Královský gambit (přijatý)
 # Popis
 description: Bílý nabízí černému pěšce výměnou za lepší pozici na šachovnici.
 
-# Kdo je na řadě. 1 = bílý, 0 = černý. 
-onmove: 1
 
 # Tahy, ve formátu SAN. Jeden dvoutah na jeden řádek. 
 moves: 

@@ -4,8 +4,6 @@ name: Giuoco Piano
 # Popis
 description: Bílý lehce zaútočí střelcem. Černý se brání.
 
-# Kdo je na řadě. 1 = bílý, 0 = černý. 
-onmove: 1
 
 # Tahy, ve formátu SAN. Jeden dvoutah na jeden řádek. 
 moves: 
