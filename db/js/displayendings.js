@@ -13,7 +13,7 @@ function reqListener() {
             let ending = jsyaml.load(this.responseText)
             ending.id = endingFile.split('.')[0]
             console.log(ending)
-            endingsBox.innerHTML += endingTemplate(ending);
+            endingsBox.innerHTML += endingTemplate(ending, endingFile);
 
 
             // Setup chess
@@ -74,10 +74,10 @@ req.send();
 
 const endingsBox = document.getElementById('endings');
 
-const endingTemplate = (ending) => {
+const endingTemplate = (ending, link) => {
 
     return `
-        <div class="col">
+        <a class="d-block text-light link-light text-decoration-none col" href="./detail.html?t=1&f=${link}">
             <article class="card shadow-sm bg-secondary text-light border">
                 <div id="board${ending.id}"></div>
                 <div class="card-body">

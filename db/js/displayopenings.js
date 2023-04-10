@@ -13,7 +13,7 @@ function reqListener() {
             let opening = jsyaml.load(this.responseText)
             opening.id = openingFile.split('.')[0]
             console.log(opening)
-            openingsBox.innerHTML += openingTemplate(opening);
+            openingsBox.innerHTML += openingTemplate(opening, openingFile);
 
 
             // Setup chess
@@ -72,10 +72,10 @@ req.send();
 
 const openingsBox = document.getElementById('openings');
 
-const openingTemplate = (opening) => {
+const openingTemplate = (opening, link) => {
 
     return `
-        <div class="col">
+        <a class="d-block text-light link-light text-decoration-none col" href="./detail.html?t=0&f=${link}">
             <article class="card shadow-sm  bg-secondary text-light border">
                 <div id="board${opening.id}"></div>
                 <div class="card-body">
@@ -83,7 +83,7 @@ const openingTemplate = (opening) => {
                     <p>${opening.description}</p>
                 </div>
             </article>
-        </div>
+        </a>
     `
 
 }
