@@ -17,8 +17,8 @@ Editací tohoto souboru a náhradou ``[ ]`` za ``[x]`` můžete evidovat, které
 * [x] Soubory webu se nacházejí v GitHubovém repozitáři
 * [x] V repozitáři se soubory ocitly pomocí commitů a pushů a těch je více než 3, rozprostřených do celé doby vypracovávání zadání
 * [x] Web je dostupný přes [Github Pages](https://pages.github.com/) (do README.md přidejte odkaz)
-* [ ] Celková načítaná velikost jednotlivých stránek nepřesahuje jednotky MiB
-* [ ] Obrázky mají rozumnou velikost pro mobilní telefon - tj. odpovídají skutečné velikost vymezeného prostoru
+* [x] Celková načítaná velikost jednotlivých stránek nepřesahuje jednotky MiB
+* [x] Obrázky mají rozumnou velikost pro mobilní telefon - tj. odpovídají skutečné velikost vymezeného prostoru
 
 ### Použité komponenty
 
@@ -26,7 +26,7 @@ Editací tohoto souboru a náhradou ``[ ]`` za ``[x]`` můžete evidovat, které
 * [x] jedna galerie s obrázky (např. pomocí prvků typu Card)
 * [x] všechny stránky budou fungovat na třech rozlišeních: telefonu (sm), tabletu (md nebo lg) a desktopu
 * [x] použitý carousel nebo hero s obrázkem
-* [ ] vytvořený formulář (kontaktní, registrační)
+* [x] vytvořený formulář (kontaktní, registrační)
 * [x] sticky záhlaví stránky s menu
 * [x] zápatí stránky (např. https://mdbootstrap.com/docs/jquery/navigation/footer/#advanced)
 * [x] modifikovaný styl Bootstrapu (https://bootstrap.build/themes, https://bootstrap.build/app , https://mdbootstrap.com/docs/jquery/getting-started/installation-guide/ )

@@ -65,8 +65,16 @@ function showBoard() {
         document.querySelector('#gamefen').style.display = 'block'
     }
 
+    function disAutoPlay(game, board) {
+        if (autoplay) {
+            autoplay = false
+            currentMove = [0, -1]
+            game.reset()
+        }
+    }
+
     document.querySelector('#tostart').addEventListener('click', () => {
-        autoplay = false
+        disAutoPlay(game, board)
         currentMove = [0, -1]
         if (ending.start) game.load(ending.start)
         else game.reset()
@@ -74,7 +82,7 @@ function showBoard() {
     })
 
     document.querySelector('#forwards').addEventListener('click', () => {
-        autoplay = false
+        disAutoPlay(game, board)
         if (currentMove[0] >= ending.moves.length) return
         if (currentMove[1] >= ending.moves[currentMove[0]].split(' ').length) return
         if (currentMove[1] == 1) {
@@ -88,7 +96,7 @@ function showBoard() {
     })
 
     document.querySelector('#backwards').addEventListener('click', () => {
-        autoplay = false
+        disAutoPlay(game, board)
         if (currentMove.toString() == [0, -1].toString()) return
         if (currentMove.toString() == [0, 0].toString()) currentMove = [0, -1]
         else if (currentMove[1] == 0) {
