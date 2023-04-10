@@ -40,9 +40,6 @@ function showBoard() {
         }
         game.move(move)
 
-        // exit if the game is over
-        if (game.game_over()) return
-
         board.position(game.fen())
 
         window.setTimeout(makeMove, Math.random() * 1000 + 500, i, nextMove)
