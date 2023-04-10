@@ -76,13 +76,13 @@ const openingTemplate = (opening) => {
 
     return `
         <div class="col">
-            <div class="card shadow-sm">
+            <article class="card shadow-sm  bg-secondary text-light border">
                 <div id="board${opening.id}"></div>
                 <div class="card-body">
                     <p class="card-text fs-3 fw-bold">${opening.name}</p>
                     <p>${opening.description}</p>
                 </div>
-            </div>
+            </article>
         </div>
     `
 

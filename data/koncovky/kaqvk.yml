@@ -1,11 +1,11 @@
 # Název Openingu/Koncovky
-name: King + Queen vs King
+name: King and Queen
 
 # Popis
 description: Best way to checkmate your opponent when you have a queen.
 
 # Úvodní pozice, nutná pouze u koncovek. Formát FEN
-start: "4k3/8/8/8/8/8/8/4KQ2 b - - 0 1"
+start: "4k3/8/8/8/8/8/8/4KQ2 w - - 0 1"
 
 # Tahy, ve formátu SAN. Jeden dvoutah na jeden řádek. 
 moves: 

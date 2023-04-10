@@ -58,28 +58,35 @@
         <div class="container col-xxl-8 px-4 py-5 bg-secondary text-light" id="about">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5 position-relative">
                 <div class="text-center pt-5">
-                    <h2 class="display-5 fw-bold lh-1 mb-3 mt-4">Šachové koncovky</h2>
-                    <p>Zde naleznete komunitní databázi šachových koncovky. </p>
+                    <h2 class="display-5 fw-bold lh-1 mb-3 mt-4">Detail</h2>
+                    <p>Detail daného otevření či koncovky. </p>
                 </div>
-                <a class="position-absolute top-50 end-0 w-auto d-flex flex-column justify-content-center align-items-center link-light text-decoration-none" href="./databaze.html#jakprispet">
-                    <div class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-primary rounded-3">
-                        <i class="fas fa-plus fs-4"></i>
-                    </div>
-                    <span class="w-auto">Přidat koncovky</span>
-                </a>
             </div>
         </div>
     </section>
 
 
-    <section class="album py-5 bg-dark">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 px-1" id="endings">
+    <article>
+        <div class="container col-xxl-8 px-4 py-5 bg-dark text-light d-flex flex-row" id="about">
+            <div class="board col-4">
+                <div id="board"></div>
+                <div class="controls d-flex flex-row justify-content-center py-2">
+                    <button id="tostart" class="btn btn-outline-primary mx-2" id="startBtn"><i class="fas fa-fast-backward"></i></button>
+                    <button id="backwards" class="btn btn-outline-primary mx-2" id="startBtn"><i class="fas fa-chevron-left"></i></button>
+                    <button id="forwards" class="btn btn-outline-primary mx-2" id="clearBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="content col-8 ps-5">
+                <h2 id="gamename" class="display-6 fw-bold"></h2>
+                <p id="gamedesc" class="fs-5 fw-light"></p>
+                <p id="gamemoves" class="fs-5 fw-light pt-4 mb-1"></p>
+                <p id="gamefen" class="fs-5 fw-light" style="display: none; "></p>
+                <!-- ! Style kvuli JS -->
             </div>
         </div>
-    </section>
+    </article>
 
-    <script defer src="./js/displayendings.js"></script>
+    <script defer src="./js/displaydetail.js"></script>
 
     </header>
     <div class="bg-secondary border-top border-2 " style="border-color: rgba(var(--bs-light-rgb), 0.1); ">

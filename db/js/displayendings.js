@@ -78,13 +78,13 @@ const endingTemplate = (ending) => {
 
     return `
         <div class="col">
-            <div class="card shadow-sm">
+            <article class="card shadow-sm bg-secondary text-light border">
                 <div id="board${ending.id}"></div>
                 <div class="card-body">
                     <p class="card-text fs-3 fw-bold">${ending.name}</p>
                     <p>${ending.description}</p>
                 </div>
-            </div>
+            </article>
         </div>
     `
 
