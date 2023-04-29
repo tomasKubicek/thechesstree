@@ -56,7 +56,7 @@ function reqListener() {
 
         const req2 = new XMLHttpRequest();
         req2.addEventListener("load", req2Listener);
-        req2.open("GET", "https://tomaskubicek.github.io/thechesstree/data/otevreni/" + openingFile);
+        req2.open("GET", "https://chess.webytom.cz/data/otevreni/" + openingFile);
         req2.send();
 
     }
@@ -64,7 +64,7 @@ function reqListener() {
 
 const req = new XMLHttpRequest();
 req.addEventListener("load", reqListener);
-req.open("GET", "https://tomaskubicek.github.io/thechesstree/otevreni.txt");
+req.open("GET", "https://chess.webytom.cz/otevreni.txt");
 req.send();
 
 const openingsBox = document.getElementById('openings');

@@ -1,0 +1,11 @@
+# Název Openingu/Koncovky
+name: Londýnský systém
+# Popis
+description: Populární rozvětvení Sicilské obrany, dochází ke komplikovaným situacím.
+
+
+# Tahy, ve formátu SAN. Jeden dvoutah na jeden řádek. 
+moves: 
+  - d4 d5
+  - Nf3 Nf6
+  - Bf4

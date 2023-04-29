@@ -112,5 +112,5 @@ function showBoard() {
 
 const req = new XMLHttpRequest();
 req.addEventListener("load", showBoard);
-req.open("GET", "https://tomaskubicek.github.io/thechesstree/data/" + (type ? 'koncovky' : 'otevreni') + "/" + file);
+req.open("GET", "https://chess.webytom.cz/data/" + (type ? 'koncovky' : 'otevreni') + "/" + file);
 req.send();

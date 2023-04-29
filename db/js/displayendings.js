@@ -58,7 +58,7 @@ function reqListener() {
 
         const req2 = new XMLHttpRequest();
         req2.addEventListener("load", req2Listener);
-        req2.open("GET", "https://tomaskubicek.github.io/thechesstree/data/koncovky/" + endingFile);
+        req2.open("GET", "https://chess.webytom.cz/data/koncovky/" + endingFile);
         req2.send();
 
     }
@@ -66,7 +66,7 @@ function reqListener() {
 
 const req = new XMLHttpRequest();
 req.addEventListener("load", reqListener);
-req.open("GET", "https://tomaskubicek.github.io/thechesstree/koncovky.txt");
+req.open("GET", "https://chess.webytom.cz/koncovky.txt");
 req.send();
 
 const endingsBox = document.getElementById('endings');
