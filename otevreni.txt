@@ -1,7 +1,9 @@
+antilondongambit.yml
 carokann.yml
 francouzskaobrana.yml
 giuocopiano.yml
 kgambit.yml
+londonsystem.yml
 ruylopez.yml
 sicilskadrak.yml
 sicilskanajdorf.yml
