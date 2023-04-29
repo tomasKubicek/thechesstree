@@ -1,9 +1,11 @@
+# Název Openingu/Koncovky
 name: Proti Londýnský Gambit
 # Popis
 description: Poruší otevření Londýnského sysmému
 
-- d4 Nf6
-- Bf4 c6
-- e3 g5
-- Bxg5 Qa5+
-- Nd2 Qxg5
+moves:
+  - d4 Nf6
+  - Bf4 c6
+  - e3 g5
+  - Bxg5 Qa5+
+  - Nd2 Qxg5
