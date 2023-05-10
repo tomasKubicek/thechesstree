@@ -2,7 +2,7 @@
 
 TheChessTree je webová aplikace, která umožňuje uživatelům hledat, procházet a přidávat šachové otevření a koncovky. 
 
-Webová aplikace bude dostupná přes github pages [https://chess.webytom.cz/](https://chess.webytom.cz/).
+Webová aplikace bude dostupná přes github pages [https://chess.webytom.cz/](https://chess.webytom.cz/) ([https://tomaskubicek.github.io/thechesstree/](https://tomaskubicek.github.io/thechesstree/)).
 
 ## Přispívání
 

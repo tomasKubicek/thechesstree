@@ -17,15 +17,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js" integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js" integrity="sha512-xRllwz2gdZciIB+AkEbeq+gVhX8VB8XsfqeFbUh+SzHlN96dEduwtTuVuc2u9EROlmW9+yhRlxjif66ORpsgVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.js" integrity="sha512-oprzqYFJfo4Bx/nNEcSI0xo7ggJrLc+qQ6hrS3zV/Jn0C4dsg4gu+FXW/Vm0jP9CrV7e5e6dcLUYkg3imjfjbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
-
-<style>
-    body {
-        overflow-y: scroll;
-    }
-</style>
 
 
 <body class="bg-dark">
@@ -55,7 +48,7 @@
         </div>
     </nav>
     <section class="bg-secondary">
-        <div class="container col-xxl-8 px-4 py-5 bg-secondary text-light" id="about">
+        <div class="container col-xxl-8 px-4 py-5 bg-secondary text-light">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5 position-relative">
                 <div class="text-center pt-5">
                     <h2 class="display-5 fw-bold lh-1 mb-3 mt-4">Detail</h2>
@@ -67,17 +60,17 @@
 
 
     <article>
-        <div class="container col-xxl-8 px-4 py-5 bg-dark text-light d-flex flex-md-row flex-column" id="about">
+        <div class="container col-xxl-8 px-4 py-5 bg-dark text-light d-flex flex-md-row flex-column">
             <div class="board col-md-4">
                 <div id="board"></div>
                 <div class="controls d-flex flex-row justify-content-center py-2">
-                    <button id="tostart" class="btn btn-outline-primary mx-2" id="startBtn"><i class="fas fa-fast-backward"></i></button>
-                    <button id="backwards" class="btn btn-outline-primary mx-2" id="startBtn"><i class="fas fa-chevron-left"></i></button>
-                    <button id="forwards" class="btn btn-outline-primary mx-2" id="clearBtn"><i class="fas fa-chevron-right"></i></button>
+                    <button id="tostart" class="btn btn-outline-primary mx-2"><i class="fas fa-fast-backward"></i></button>
+                    <button id="backwards" class="btn btn-outline-primary mx-2"><i class="fas fa-chevron-left"></i></button>
+                    <button id="forwards" class="btn btn-outline-primary mx-2"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
             <div class="content col-md-8 ps-5">
-                <h2 id="gamename" class="display-6 fw-bold"></h2>
+                <h2 id="gamename" class="display-6 fw-bold">Načítání...</h2>
                 <p id="gamedesc" class="fs-5 fw-light"></p>
                 <p id="gamemoves" class="fs-5 fw-light pt-4 mb-1"></p>
                 <p id="gamefen" class="fs-5 fw-light" style="display: none; "></p>
@@ -88,7 +81,6 @@
 
     <script defer src="./js/displaydetail.js"></script>
 
-    </header>
     <div class="bg-secondary border-top border-2 " style="border-color: rgba(var(--bs-light-rgb), 0.1); ">
         <div class="container ">
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 ">
@@ -101,8 +93,8 @@
 
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex fs-4">
                     <li class="ms-3 "><a class="text-light " href="#"><i class="fas fa-angle-up text-primary "></i></a></li>
-                    <li class="ms-3 "><a class="text-light " href="https://github.com/tomasKubicek/thechesstree" target="_blank "><i class="fab fa-github text-primary "></i></a></li>
-                    <li class="ms-3 "><a class="text-light " href="https://www.instagram.com/kubanec_tomanec/" target="_blank "><i class="fab fa-instagram text-primary "></i></a></li>
+                    <li class="ms-3 "><a class="text-light " href="https://github.com/tomasKubicek/thechesstree" target="_blank"><i class="fab fa-github text-primary "></i></a></li>
+                    <li class="ms-3 "><a class="text-light " href="https://www.instagram.com/kubanec_tomanec/" target="_blank"><i class="fab fa-instagram text-primary "></i></a></li>
                 </ul>
             </footer>
         </div>
